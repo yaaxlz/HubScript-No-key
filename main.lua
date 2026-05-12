@@ -8,10 +8,14 @@ local Lighting = game:GetService("Lighting")
 
 local LocalPlayer = Players.LocalPlayer
 
+-- =========================================
+-- WINDOW
+-- =========================================
+
 local Window = Rayfield:CreateWindow({
     Name = "HubScript No Key",
     LoadingTitle = "HubScript",
-    LoadingSubtitle = "Premium Hub",
+    LoadingSubtitle = "Optimized Hub",
     ConfigurationSaving = {
         Enabled = true,
         FolderName = "HubScript",
@@ -24,6 +28,27 @@ local Window = Rayfield:CreateWindow({
 })
 
 -- =========================================
+-- AUTO CLOSE FUNCTION
+-- =========================================
+
+local function ExecuteScript(Link)
+    Rayfield:Notify({
+        Title = "Executando",
+        Content = "Iniciando script...",
+        Duration = 2,
+        Image = 4483362458,
+    })
+
+    task.wait(0.5)
+
+    Rayfield:Destroy()
+
+    task.wait(0.2)
+
+    loadstring(game:HttpGet(Link))()
+end
+
+-- =========================================
 -- GAMES
 -- =========================================
 
@@ -34,28 +59,35 @@ Games:CreateSection("Scripts")
 Games:CreateButton({
     Name = "✨ Slime RNG",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/xlebaaa3-netizen/cryo/refs/heads/main/loader.luau"))()
+        ExecuteScript("https://raw.githubusercontent.com/xlebaaa3-netizen/cryo/refs/heads/main/loader.luau")
     end,
 })
 
 Games:CreateButton({
     Name = "🏀 Basketball Training",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/main/BasketballTraining"))()
+        ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/BasketballTraining")
     end,
 })
 
 Games:CreateButton({
     Name = "💰 Be a Thief",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/main/BeaThief"))()
+        ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/BeaThief")
     end,
 })
 
 Games:CreateButton({
     Name = "💈 Be A Hair",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/main/BeAHair"))()
+        ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/BeAHair")
+    end,
+})
+
+Games:CreateButton({
+    Name = "⚔️ Sailor Piece",
+    Callback = function()
+        ExecuteScript("https://raw.githubusercontent.com/gix314/crispy-waffle/refs/heads/main/wah.lua")
     end,
 })
 
@@ -91,7 +123,9 @@ Player:CreateSlider({
     end,
 })
 
--- Infinite Jump
+-- =========================================
+-- INFINITE JUMP
+-- =========================================
 
 getgenv().InfiniteJump = false
 
@@ -106,8 +140,10 @@ Player:CreateToggle({
 UserInputService.JumpRequest:Connect(function()
     if getgenv().InfiniteJump then
         local Character = LocalPlayer.Character
+
         if Character then
             local Humanoid = Character:FindFirstChildOfClass("Humanoid")
+
             if Humanoid then
                 Humanoid:ChangeState("Jumping")
             end
@@ -115,7 +151,9 @@ UserInputService.JumpRequest:Connect(function()
     end
 end)
 
--- Noclip
+-- =========================================
+-- NOCLIP
+-- =========================================
 
 getgenv().Noclip = false
 
@@ -130,6 +168,7 @@ Player:CreateToggle({
 RunService.Stepped:Connect(function()
     if getgenv().Noclip then
         local Character = LocalPlayer.Character
+
         if Character then
             for _, v in pairs(Character:GetDescendants()) do
                 if v:IsA("BasePart") then
@@ -140,7 +179,9 @@ RunService.Stepped:Connect(function()
     end
 end)
 
--- FullBright
+-- =========================================
+-- FULLBRIGHT
+-- =========================================
 
 Player:CreateButton({
     Name = "☀ FullBright",
@@ -149,6 +190,13 @@ Player:CreateButton({
         Lighting.ClockTime = 12
         Lighting.FogEnd = 100000
         Lighting.GlobalShadows = false
+
+        Rayfield:Notify({
+            Title = "FullBright",
+            Content = "Ativado com sucesso!",
+            Duration = 3,
+            Image = 4483362458,
+        })
     end,
 })
 
@@ -156,7 +204,7 @@ Player:CreateButton({
 -- SETTINGS
 -- =========================================
 
-local Settings = Window:CreateTab("⚙ Settings", 4483362458)
+local Settings = Window:CreateTab("⚙️ Settings", 4483362458)
 
 Settings:CreateButton({
     Name = "🔄 Rejoin",
@@ -178,7 +226,7 @@ Settings:CreateButton({
 
 Rayfield:Notify({
     Title = "HubScript No Key",
-    Content = "Hub carregado com sucesso!",
+    Content = "Hub carregado!",
     Duration = 5,
     Image = 4483362458,
 })
