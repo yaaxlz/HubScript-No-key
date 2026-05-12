@@ -34,7 +34,7 @@ Games:CreateSection("Scripts")
 Games:CreateButton({
     Name = "✨ Slime RNG",
     Callback = function()
-        loadstring(game:HttpGet("https://vss.pandadevelopment.net/virtual/file/475911550cec4d6d"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xlebaaa3-netizen/cryo/refs/heads/main/loader.luau"))()
     end,
 })
 
