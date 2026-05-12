@@ -1,4 +1,3 @@
-```lua
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
 
 local Players = game:GetService("Players")
@@ -183,4 +182,3 @@ Rayfield:Notify({
     Duration = 5,
     Image = 4483362458,
 })
-```
