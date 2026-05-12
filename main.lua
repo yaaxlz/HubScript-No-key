@@ -1,3 +1,4 @@
+```lua
 local Rayfield = loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
 
 local Players = game:GetService("Players")
@@ -49,6 +50,13 @@ Games:CreateButton({
     Name = "💰 Be a Thief",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/main/BeaThief"))()
+    end,
+})
+
+Games:CreateButton({
+    Name = "💈 Be A Hair",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/main/BeAHair"))()
     end,
 })
 
@@ -175,3 +183,4 @@ Rayfield:Notify({
     Duration = 5,
     Image = 4483362458,
 })
+```
