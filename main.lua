@@ -91,6 +91,13 @@ Games:CreateButton({
     end,
 })
 
+Games:CreateButton({
+    Name = "🌧️ Escape Rain For Lucky Blocks",
+    Callback = function()
+        ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/EscapeRainForLuckyBlocks")
+    end,
+})
+
 -- =========================================
 -- PLAYER
 -- =========================================
