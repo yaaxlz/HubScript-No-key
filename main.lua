@@ -98,6 +98,13 @@ Games:CreateButton({
     end,
 })
 
+Games:CreateButton({
+    Name = "🍔 Get HEAVY for Brainrots",
+    Callback = function()
+        ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/GetHEAVYforBrainrots")
+    end,
+})
+
 -- =========================================
 -- PLAYER
 -- =========================================
