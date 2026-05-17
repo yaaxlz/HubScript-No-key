@@ -57,6 +57,13 @@ local Games = Window:CreateTab("🎮 Games", 4483362458)
 Games:CreateSection("Scripts")
 
 Games:CreateButton({
+    Name = "🧟Survive Zombie Arena",
+    Callback = function()
+        ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/SurviveZombieArena")
+    end,
+})
+
+Games:CreateButton({
     Name = "🦵 Kick a Lucky Block",
     Callback = function()
         ExecuteScript("https://raw.githubusercontent.com/Omnie7/Luxy5X/refs/heads/main/main.luau")
