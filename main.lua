@@ -57,6 +57,13 @@ local Games = Window:CreateTab("🎮 Games", 4483362458)
 Games:CreateSection("Scripts")
 
 Games:CreateButton({
+    Name = "🦵 Kick a Lucky Block",
+    Callback = function()
+        ExecuteScript("https://raw.githubusercontent.com/Omnie7/Luxy5X/refs/heads/main/main.luau")
+    end,
+})
+
+Games:CreateButton({
     Name = "✨ Slime RNG",
     Callback = function()
         ExecuteScript("https://raw.githubusercontent.com/xlebaaa3-netizen/cryo/refs/heads/main/loader.luau")
