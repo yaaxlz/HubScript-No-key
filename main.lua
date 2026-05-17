@@ -27,6 +27,8 @@ local Window = Rayfield:CreateWindow({
     KeySystem = false
 })
 
+Window:SetSize(UDim2.new(0, 700, 0, 500))
+
 -- =========================================
 -- EXECUTE FUNCTION
 -- =========================================
