@@ -49,17 +49,12 @@ local function ExecuteScript(Link)
 end
 
 -- =========================================
--- GAMES
+-- GAMES TAB
 -- =========================================
 
-local Games = Window:CreateTab("🎮 Games", 4483362458)
+local Games = Window:CreateTab("🎮 Games", "gamepad-2")
 
-Games:CreateParagraph({
-    Title = "🎮 HubScript Games",
-    Content = "Scroll down to view all available scripts in the hub."
-})
-
-Games:CreateDivider()
+Games:CreateSection("Scripts")
 
 Games:CreateButton({
     Name = "🦵 Kick a Lucky Block",
@@ -68,16 +63,12 @@ Games:CreateButton({
     end,
 })
 
-Games:CreateDivider()
-
 Games:CreateButton({
     Name = "✨ Slime RNG",
     Callback = function()
         ExecuteScript("https://raw.githubusercontent.com/xlebaaa3-netizen/cryo/refs/heads/main/loader.luau")
     end,
 })
-
-Games:CreateDivider()
 
 Games:CreateButton({
     Name = "🏀 Basketball Training",
@@ -86,16 +77,12 @@ Games:CreateButton({
     end,
 })
 
-Games:CreateDivider()
-
 Games:CreateButton({
     Name = "💰 Be a Thief",
     Callback = function()
         ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/BeaThief")
     end,
 })
-
-Games:CreateDivider()
 
 Games:CreateButton({
     Name = "💈 Be A Hair",
@@ -104,8 +91,6 @@ Games:CreateButton({
     end,
 })
 
-Games:CreateDivider()
-
 Games:CreateButton({
     Name = "⚔️ Sailor Piece",
     Callback = function()
@@ -113,16 +98,12 @@ Games:CreateButton({
     end,
 })
 
-Games:CreateDivider()
-
 Games:CreateButton({
     Name = "🌧️ Escape Rain For Lucky Blocks",
     Callback = function()
         ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/EscapeRainForLuckyBlocks")
     end,
 })
-
-Games:CreateDivider()
 
 Games:CreateButton({
     Name = "🍔 Get HEAVY for Brainrots",
@@ -132,17 +113,12 @@ Games:CreateButton({
 })
 
 -- =========================================
--- PLAYER
+-- PLAYER TAB
 -- =========================================
 
-local Player = Window:CreateTab("👤 Player", 4483362458)
+local Player = Window:CreateTab("👤 Player", "user")
 
-Player:CreateParagraph({
-    Title = "👤 Player Settings",
-    Content = "Local gameplay enhancement features."
-})
-
-Player:CreateDivider()
+Player:CreateSection("Player Settings")
 
 Player:CreateSlider({
     Name = "WalkSpeed",
@@ -156,8 +132,6 @@ Player:CreateSlider({
     end,
 })
 
-Player:CreateDivider()
-
 Player:CreateSlider({
     Name = "JumpPower",
     Range = {50, 500},
@@ -170,13 +144,9 @@ Player:CreateSlider({
     end,
 })
 
--- =========================================
--- INFINITE JUMP
--- =========================================
+-- Infinite Jump
 
 getgenv().InfiniteJump = false
-
-Player:CreateDivider()
 
 Player:CreateToggle({
     Name = "Infinite Jump",
@@ -200,13 +170,9 @@ UserInputService.JumpRequest:Connect(function()
     end
 end)
 
--- =========================================
--- NOCLIP
--- =========================================
+-- Noclip
 
 getgenv().Noclip = false
-
-Player:CreateDivider()
 
 Player:CreateToggle({
     Name = "Noclip",
@@ -230,11 +196,7 @@ RunService.Stepped:Connect(function()
     end
 end)
 
--- =========================================
--- FULLBRIGHT
--- =========================================
-
-Player:CreateDivider()
+-- FullBright
 
 Player:CreateButton({
     Name = "☀ FullBright",
@@ -254,17 +216,12 @@ Player:CreateButton({
 })
 
 -- =========================================
--- SETTINGS
+-- SETTINGS TAB
 -- =========================================
 
-local Settings = Window:CreateTab("⚙️ Settings", 4483362458)
+local Settings = Window:CreateTab("⚙️ Settings", "settings")
 
-Settings:CreateParagraph({
-    Title = "⚙️ Hub Settings",
-    Content = "General HubScript settings."
-})
-
-Settings:CreateDivider()
+Settings:CreateSection("Hub Settings")
 
 Settings:CreateButton({
     Name = "🔄 Rejoin",
@@ -272,8 +229,6 @@ Settings:CreateButton({
         TeleportService:Teleport(game.PlaceId, LocalPlayer)
     end,
 })
-
-Settings:CreateDivider()
 
 Settings:CreateButton({
     Name = "❌ Destroy UI",
@@ -283,7 +238,7 @@ Settings:CreateButton({
 })
 
 -- =========================================
--- NOTIFY
+-- NOTIFICATION
 -- =========================================
 
 Rayfield:Notify({
