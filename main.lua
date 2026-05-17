@@ -39,13 +39,13 @@ local function ExecuteScript(Link)
         Image = 4483362458,
     })
 
-    task.wait(0.5)
+    task.spawn(function()
+        loadstring(game:HttpGet(Link))()
+    end)
+
+    task.wait(1)
 
     Rayfield:Destroy()
-
-    task.wait(0.2)
-
-    loadstring(game:HttpGet(Link))()
 end
 
 -- =========================================
