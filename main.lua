@@ -15,7 +15,7 @@ local LocalPlayer = Players.LocalPlayer
 local Window = Rayfield:CreateWindow({
     Name = "HubScript No Key",
     LoadingTitle = "HubScript",
-    LoadingSubtitle = "Optimized Hub",
+    LoadingSubtitle = "Game Hub",
     ConfigurationSaving = {
         Enabled = true,
         FolderName = "HubScript",
@@ -28,7 +28,7 @@ local Window = Rayfield:CreateWindow({
 })
 
 -- =========================================
--- AUTO CLOSE FUNCTION
+-- EXECUTE FUNCTION
 -- =========================================
 
 local function ExecuteScript(Link)
@@ -52,7 +52,7 @@ end
 -- GAMES TAB
 -- =========================================
 
-local Games = Window:CreateTab("🎮 Games", "gamepad-2")
+local Games = Window:CreateTab("🎮 Games", 4483362458)
 
 Games:CreateSection("Scripts")
 
@@ -116,9 +116,9 @@ Games:CreateButton({
 -- PLAYER TAB
 -- =========================================
 
-local Player = Window:CreateTab("👤 Player", "user")
+local Player = Window:CreateTab("👤 Player", 4483362458)
 
-Player:CreateSection("Player Settings")
+Player:CreateSection("Player")
 
 Player:CreateSlider({
     Name = "WalkSpeed",
@@ -205,13 +205,6 @@ Player:CreateButton({
         Lighting.ClockTime = 12
         Lighting.FogEnd = 100000
         Lighting.GlobalShadows = false
-
-        Rayfield:Notify({
-            Title = "FullBright",
-            Content = "Enabled successfully!",
-            Duration = 3,
-            Image = 4483362458,
-        })
     end,
 })
 
@@ -219,9 +212,9 @@ Player:CreateButton({
 -- SETTINGS TAB
 -- =========================================
 
-local Settings = Window:CreateTab("⚙️ Settings", "settings")
+local Settings = Window:CreateTab("⚙️ Settings", 4483362458)
 
-Settings:CreateSection("Hub Settings")
+Settings:CreateSection("Settings")
 
 Settings:CreateButton({
     Name = "🔄 Rejoin",
@@ -238,7 +231,7 @@ Settings:CreateButton({
 })
 
 -- =========================================
--- NOTIFICATION
+-- NOTIFY
 -- =========================================
 
 Rayfield:Notify({
