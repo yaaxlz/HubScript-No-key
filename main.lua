@@ -33,8 +33,8 @@ local Window = Rayfield:CreateWindow({
 
 local function ExecuteScript(Link)
     Rayfield:Notify({
-        Title = "Executando",
-        Content = "Iniciando script...",
+        Title = "Executing",
+        Content = "Starting script...",
         Duration = 2,
         Image = 4483362458,
     })
@@ -54,7 +54,12 @@ end
 
 local Games = Window:CreateTab("🎮 Games", 4483362458)
 
-Games:CreateSection("Scripts")
+Games:CreateParagraph({
+    Title = "🎮 HubScript Games",
+    Content = "Scroll down to view all available scripts in the hub."
+})
+
+Games:CreateDivider()
 
 Games:CreateButton({
     Name = "🦵 Kick a Lucky Block",
@@ -63,12 +68,16 @@ Games:CreateButton({
     end,
 })
 
+Games:CreateDivider()
+
 Games:CreateButton({
     Name = "✨ Slime RNG",
     Callback = function()
         ExecuteScript("https://raw.githubusercontent.com/xlebaaa3-netizen/cryo/refs/heads/main/loader.luau")
     end,
 })
+
+Games:CreateDivider()
 
 Games:CreateButton({
     Name = "🏀 Basketball Training",
@@ -77,12 +86,16 @@ Games:CreateButton({
     end,
 })
 
+Games:CreateDivider()
+
 Games:CreateButton({
     Name = "💰 Be a Thief",
     Callback = function()
         ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/BeaThief")
     end,
 })
+
+Games:CreateDivider()
 
 Games:CreateButton({
     Name = "💈 Be A Hair",
@@ -91,6 +104,8 @@ Games:CreateButton({
     end,
 })
 
+Games:CreateDivider()
+
 Games:CreateButton({
     Name = "⚔️ Sailor Piece",
     Callback = function()
@@ -98,12 +113,16 @@ Games:CreateButton({
     end,
 })
 
+Games:CreateDivider()
+
 Games:CreateButton({
     Name = "🌧️ Escape Rain For Lucky Blocks",
     Callback = function()
         ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/EscapeRainForLuckyBlocks")
     end,
 })
+
+Games:CreateDivider()
 
 Games:CreateButton({
     Name = "🍔 Get HEAVY for Brainrots",
@@ -118,7 +137,12 @@ Games:CreateButton({
 
 local Player = Window:CreateTab("👤 Player", 4483362458)
 
-Player:CreateSection("Movimentação")
+Player:CreateParagraph({
+    Title = "👤 Player Settings",
+    Content = "Local gameplay enhancement features."
+})
+
+Player:CreateDivider()
 
 Player:CreateSlider({
     Name = "WalkSpeed",
@@ -131,6 +155,8 @@ Player:CreateSlider({
         Humanoid.WalkSpeed = Value
     end,
 })
+
+Player:CreateDivider()
 
 Player:CreateSlider({
     Name = "JumpPower",
@@ -149,6 +175,8 @@ Player:CreateSlider({
 -- =========================================
 
 getgenv().InfiniteJump = false
+
+Player:CreateDivider()
 
 Player:CreateToggle({
     Name = "Infinite Jump",
@@ -178,6 +206,8 @@ end)
 
 getgenv().Noclip = false
 
+Player:CreateDivider()
+
 Player:CreateToggle({
     Name = "Noclip",
     CurrentValue = false,
@@ -204,6 +234,8 @@ end)
 -- FULLBRIGHT
 -- =========================================
 
+Player:CreateDivider()
+
 Player:CreateButton({
     Name = "☀ FullBright",
     Callback = function()
@@ -214,7 +246,7 @@ Player:CreateButton({
 
         Rayfield:Notify({
             Title = "FullBright",
-            Content = "Ativado com sucesso!",
+            Content = "Enabled successfully!",
             Duration = 3,
             Image = 4483362458,
         })
@@ -227,12 +259,21 @@ Player:CreateButton({
 
 local Settings = Window:CreateTab("⚙️ Settings", 4483362458)
 
+Settings:CreateParagraph({
+    Title = "⚙️ Hub Settings",
+    Content = "General HubScript settings."
+})
+
+Settings:CreateDivider()
+
 Settings:CreateButton({
     Name = "🔄 Rejoin",
     Callback = function()
         TeleportService:Teleport(game.PlaceId, LocalPlayer)
     end,
 })
+
+Settings:CreateDivider()
 
 Settings:CreateButton({
     Name = "❌ Destroy UI",
@@ -247,7 +288,7 @@ Settings:CreateButton({
 
 Rayfield:Notify({
     Title = "HubScript No Key",
-    Content = "Hub carregado!",
+    Content = "Hub loaded successfully!",
     Duration = 5,
     Image = 4483362458,
 })
