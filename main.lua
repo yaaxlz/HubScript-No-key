@@ -149,6 +149,13 @@ New:CreateButton({
     end,
 })
 
+New:CreateButton({
+    Name = "+1 Speed Collect Minion",
+    Callback = function()
+        ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/1SpeedCollectMinion")
+    end,
+})
+
 -- =========================================
 -- PLAYER TAB
 -- =========================================
