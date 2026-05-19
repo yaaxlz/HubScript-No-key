@@ -49,24 +49,27 @@ local function ExecuteScript(Link)
 end
 
 -- =========================================
--- GAMES TAB
+-- TABS
 -- =========================================
 
 local Games = Window:CreateTab("🎮 Games", 4483362458)
 
+local New = Window:CreateTab("✨ New", 4483362458)
+
+local Player = Window:CreateTab("👤 Player", 4483362458)
+
+local Settings = Window:CreateTab("⚙️ Settings", 4483362458)
+
+-- =========================================
+-- GAMES TAB
+-- =========================================
+
 Games:CreateSection("Scripts")
 
 Games:CreateButton({
-    Name = "🧟Survive Zombie Arena",
+    Name = "🧟 Survive Zombie Arena",
     Callback = function()
         ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/SurviveZombieArena")
-    end,
-})
-
-Games:CreateButton({
-    Name = "🦵 Kick a Lucky Block",
-    Callback = function()
-        ExecuteScript("https://raw.githubusercontent.com/Omnie7/Luxy5X/refs/heads/main/main.luau")
     end,
 })
 
@@ -92,9 +95,9 @@ Games:CreateButton({
 })
 
 Games:CreateButton({
-    Name = "💈 Be A Hair",
+    Name = "🏁 Race Your Lucky Block",
     Callback = function()
-        ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/BeAHair")
+        ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/RaceYourLuckyBlock")
     end,
 })
 
@@ -120,10 +123,35 @@ Games:CreateButton({
 })
 
 -- =========================================
--- PLAYER TAB
+-- NEW TAB
 -- =========================================
 
-local Player = Window:CreateTab("👤 Player", 4483362458)
+New:CreateSection("New Scripts")
+
+New:CreateButton({
+    Name = "🌽 Build A Ring Farm",
+    Callback = function()
+        ExecuteScript("https://raw.githubusercontent.com/femmehomme90-web/scripts/refs/heads/main/Build-A-Ring-Farm")
+    end,
+})
+
+New:CreateButton({
+    Name = "🦵 Kick a Lucky Block",
+    Callback = function()
+        ExecuteScript("https://raw.githubusercontent.com/Omnie7/Luxy-Hub/refs/heads/main/main.lua")
+    end,
+})
+
+New:CreateButton({
+    Name = "Blox Fruits",
+    Callback = function()
+        ExecuteScript("https://raw.githubusercontent.com/TumadamMod/cwertyur/refs/heads/main/TumadamEng.lua")
+    end,
+})
+
+-- =========================================
+-- PLAYER TAB
+-- =========================================
 
 Player:CreateSection("Player")
 
@@ -151,8 +179,6 @@ Player:CreateSlider({
     end,
 })
 
--- Infinite Jump
-
 getgenv().InfiniteJump = false
 
 Player:CreateToggle({
@@ -176,8 +202,6 @@ UserInputService.JumpRequest:Connect(function()
         end
     end
 end)
-
--- Noclip
 
 getgenv().Noclip = false
 
@@ -203,8 +227,6 @@ RunService.Stepped:Connect(function()
     end
 end)
 
--- FullBright
-
 Player:CreateButton({
     Name = "☀ FullBright",
     Callback = function()
@@ -218,8 +240,6 @@ Player:CreateButton({
 -- =========================================
 -- SETTINGS TAB
 -- =========================================
-
-local Settings = Window:CreateTab("⚙️ Settings", 4483362458)
 
 Settings:CreateSection("Settings")
 
