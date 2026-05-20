@@ -156,6 +156,20 @@ New:CreateButton({
     end,
 })
 
+New:CreateButton({
+    Name = "🧟 Survive Zombie Arena",
+    Callback = function()
+        ExecuteScript("https://raw.githubusercontent.com/caomod2077/Script/refs/heads/main/Foxname_SZA.lua")
+    end,
+})
+
+New:CreateButton({
+    Name = "🚂 Dead Rails",
+    Callback = function()
+        ExecuteScript("https://raw.githubusercontent.com/caomod2077/Script/refs/heads/main/Foxname-Dr.lua")
+    end,
+})
+
 -- =========================================
 -- PLAYER TAB
 -- =========================================
