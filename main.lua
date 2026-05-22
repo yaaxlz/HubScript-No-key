@@ -170,6 +170,12 @@ New:CreateButton({
     end,
 })
 
+New:CreateButton({
+    Name = "🍰 Bake or Die 💀",
+    Callback = function()
+        ExecuteScript("https://pastebin.com/raw/b04fABf3")
+    end,
+})
 -- =========================================
 -- PLAYER TAB
 -- =========================================
