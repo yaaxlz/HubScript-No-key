@@ -129,6 +129,13 @@ Games:CreateButton({
 New:CreateSection("New Scripts")
 
 New:CreateButton({
+    Name = "[💥] Mini War",
+    Callback = function()
+        ExecuteScript("https://raw.githubusercontent.com/LynX99-9/komtolmmek2script/refs/heads/main/CyraaHub.lua")
+    end,
+})
+
+New:CreateButton({
     Name = "🌽 Build A Ring Farm",
     Callback = function()
         ExecuteScript("https://raw.githubusercontent.com/femmehomme90-web/scripts/refs/heads/main/Build-A-Ring-Farm")
