@@ -129,6 +129,13 @@ Games:CreateButton({
 New:CreateSection("New Scripts")
 
 New:CreateButton({
+    Name = "Pickaxe Tycoon ⛏️",
+    Callback = function()
+        ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/PickaxeTycoon")
+    end,
+})
+
+New:CreateButton({
     Name = "[💥] Mini War",
     Callback = function()
         ExecuteScript("https://raw.githubusercontent.com/LynX99-9/komtolmmek2script/refs/heads/main/CyraaHub.lua")
