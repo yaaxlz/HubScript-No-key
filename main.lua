@@ -52,7 +52,7 @@ end
 -- TABS
 -- =========================================
 
-local Games = Window:CreateTab("🎮 Games", 4483362458)
+local Games = Window:CreateTab("🔥 Scripts", 4483362458)
 
 local New = Window:CreateTab("✨ New", 4483362458)
 
@@ -127,6 +127,13 @@ Games:CreateButton({
 -- =========================================
 
 New:CreateSection("New Scripts")
+
+New:CreateButton({
+    Name = "Find and Snipe Brainrot",
+    Callback = function()
+        ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/FindandsnipeBrainrot")
+    end,
+})
 
 New:CreateButton({
     Name = "Pickaxe Tycoon ⛏️",
