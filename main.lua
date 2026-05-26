@@ -13,9 +13,9 @@ local LocalPlayer = Players.LocalPlayer
 -- =========================================
 
 local Window = Rayfield:CreateWindow({
-    Name = "HubScript No Key",
+    Name = "🔥 HubScript | ALL NO KEY",
     LoadingTitle = "HubScript",
-    LoadingSubtitle = "Game Hub",
+    LoadingSubtitle = "All Scripts No Key",
     ConfigurationSaving = {
         Enabled = true,
         FolderName = "HubScript",
@@ -310,7 +310,7 @@ Settings:CreateButton({
 -- =========================================
 
 Rayfield:Notify({
-    Title = "HubScript No Key",
+    Title = "🔥 HubScript | ALL NO KEY",
     Content = "Hub loaded successfully!",
     Duration = 5,
     Image = 4483362458,
