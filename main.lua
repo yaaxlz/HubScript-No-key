@@ -129,9 +129,9 @@ Games:CreateButton({
 New:CreateSection("New Scripts")
 
 New:CreateButton({
-    Name = " Violence District",
+    Name = "🔫 Violence District",
     Callback = function()
-        ExecuteScript("https://raw.githubusercontent.com/Kaitoo-KT/Exploit/refs/heads/main/vdvip_obf.lua.txt")
+        ExecuteScript("https://violencedistrict.mpanhub.me/")
     end,
 })
 
