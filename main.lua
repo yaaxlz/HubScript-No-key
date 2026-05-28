@@ -129,6 +129,13 @@ Games:CreateButton({
 New:CreateSection("New Scripts")
 
 New:CreateButton({
+    Name = "🪨 Push Rock for Brainrots",
+    Callback = function()
+        ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/PushRockforBrainrots")
+    end,
+})
+
+New:CreateButton({
     Name = "🥟 Dumpling Squishy Race",
     Callback = function()
         ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/DumplingSquishyRace")
