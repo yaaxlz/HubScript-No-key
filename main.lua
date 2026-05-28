@@ -129,6 +129,13 @@ Games:CreateButton({
 New:CreateSection("New Scripts")
 
 New:CreateButton({
+    Name = " Violence District",
+    Callback = function()
+        ExecuteScript("https://raw.githubusercontent.com/Kaitoo-KT/Exploit/refs/heads/main/vdvip_obf.lua.txt")
+    end,
+})
+
+New:CreateButton({
     Name = "🪨 Push Rock for Brainrots",
     Callback = function()
         ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/PushRockforBrainrots")
