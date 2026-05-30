@@ -129,6 +129,20 @@ Games:CreateButton({
 New:CreateSection("New Scripts")
 
 New:CreateButton({
+    Name = "🌌 Dream for Brainrots 😈",
+    Callback = function()
+        ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/DreamforBrainrots")
+    end,
+})
+
+New:CreateButton({
+    Name = " Wall Hop Slap Meter",
+    Callback = function()
+        ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/WallHopSlapMeter")
+    end,
+})
+
+New:CreateButton({
     Name = "🔫 Violence District",
     Callback = function()
         ExecuteScript("https://violencedistrict.mpanhub.me/")
