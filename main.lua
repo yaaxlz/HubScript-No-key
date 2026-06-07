@@ -129,6 +129,34 @@ Games:CreateButton({
 New:CreateSection("New Scripts")
 
 New:CreateButton({
+    Name = "🦑 100 Days At Sea",
+    Callback = function()
+        ExecuteScript("https://pastebin.com/raw/QmcHcyfu")
+    end,
+})
+
+New:CreateButton({
+    Name = "🍀 Lucky Block Rush",
+    Callback = function()
+        ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/LuckyBlockRush")
+    end,
+})
+
+New:CreateButton({
+    Name = "🍋 Sell Lemons",
+    Callback = function()
+        ExecuteScript("https://raw.githubusercontent.com/LynX99-9/komtolmmek2script/refs/heads/main/CyraaHub.lua")
+    end,
+})
+
+New:CreateButton({
+    Name = "⭐ Anime Card Collection",
+    Callback = function()
+        ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/AnimeCardCollection")
+    end,
+})
+
+New:CreateButton({
     Name = "🌌 Dream for Brainrots 😈",
     Callback = function()
         ExecuteScript("https://raw.githubusercontent.com/gumanba/Scripts/main/DreamforBrainrots")
